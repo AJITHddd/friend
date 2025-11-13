@@ -11,7 +11,7 @@ const App = () => {
     width: window.innerWidth,
     height: window.innerHeight,
   });
-
+  const src ="../image/WhatsApp Image 2025-11-13 at 17.19.46_54e1092a.jpg";
   // 🖥️ Track window size for responsiveness
   useEffect(() => {
     const handleResize = () => {
@@ -121,7 +121,7 @@ const App = () => {
       {/* 🖼️ Image */}
       <div>
         <img
-          src="image/WhatsApp Image 2025-11-13 at 17.19.46_54e1092a.jpg"
+          src={src}
           alt="Celebration"
           style={{
             width: "100%",
@@ -164,7 +164,7 @@ const App = () => {
       {/* 🎧 Audio */}
       <audio
         ref={audioRef}
-        src="https://drive.google.com/file/d/1iC4ZcEeC7gLytGOzO5aGMD01BFJu6oYn/view?usp=drivesdk"
+        src="image/WhatsApp Audio 2025-11-13 at 17.33.24_6a2497b1.mp3"
       />
     </div>
   );
