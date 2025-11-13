@@ -11,7 +11,7 @@ const App = () => {
     width: window.innerWidth,
     height: window.innerHeight,
   });
-  const src ="./image/WhatsApp Image 2025-11-13 at 17.19.46_54e1092a.jpg";
+
   // 🖥️ Track window size for responsiveness
   useEffect(() => {
     const handleResize = () => {
@@ -21,7 +21,7 @@ const App = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // 🔊 Play/Pause Audio
+  // 🔊 Play / Pause
   const handlePlayPause = () => {
     if (audioRef.current) {
       if (isPlaying) audioRef.current.pause();
@@ -30,7 +30,7 @@ const App = () => {
     }
   };
 
-  // 🎇 Theme selection (only Ajith)
+  // 🎇 Theme selection
   useEffect(() => {
     const key = keyword.toLowerCase();
     if (key.includes("ajith")) {
@@ -42,7 +42,7 @@ const App = () => {
     }
   }, [keyword]);
 
-  // 🎨 Theme Styles
+  // 🎨 Theme styles
   const themeStyles = {
     default: {
       backgroundColor: "#f4f4f4",
@@ -55,7 +55,6 @@ const App = () => {
     },
   };
 
-  // 🎉 Greeting Message
   const getGreeting = () => {
     const key = keyword.toLowerCase();
     if (key.includes("ajith")) return "🎆 Welcome Ajith! Let’s Celebrate!";
@@ -72,6 +71,7 @@ const App = () => {
         ...themeStyles[theme],
       }}
     >
+      {/* 🔥 CSS Animations */}
       <style>
         {`
           @keyframes pulse {
@@ -82,7 +82,7 @@ const App = () => {
         `}
       </style>
 
-      {/* 🎇 Confetti Effect */}
+      {/* 🎉 Confetti */}
       {showConfetti && (
         <Confetti
           width={windowSize.width}
@@ -121,7 +121,7 @@ const App = () => {
       {/* 🖼️ Image */}
       <div>
         <img
-          src={src}
+          src="/assets/image/whatsapp_image.jpg"
           alt="Celebration"
           style={{
             width: "100%",
@@ -134,7 +134,7 @@ const App = () => {
         />
       </div>
 
-      {/* 🎉 Greeting */}
+      {/* 🎆 Greeting */}
       <h2
         style={{
           marginBottom: "20px",
@@ -164,7 +164,7 @@ const App = () => {
       {/* 🎧 Audio */}
       <audio
         ref={audioRef}
-        src="./image/WhatsApp Audio 2025-11-13 at 17.33.24_6a2497b1.mp3"
+        src="/assets/audio/song.mp3"
       />
     </div>
   );
