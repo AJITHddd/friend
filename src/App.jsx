@@ -11,7 +11,7 @@ const App = () => {
     width: window.innerWidth,
     height: window.innerHeight,
   });
-  const src ="../public/image/WhatsApp Image 2025-11-13 at 17.19.46_54e1092a.jpg";
+  const src ="./image/WhatsApp Image 2025-11-13 at 17.19.46_54e1092a.jpg";
   // 🖥️ Track window size for responsiveness
   useEffect(() => {
     const handleResize = () => {
@@ -164,7 +164,7 @@ const App = () => {
       {/* 🎧 Audio */}
       <audio
         ref={audioRef}
-        src="../public/image/WhatsApp Audio 2025-11-13 at 17.33.24_6a2497b1.mp3"
+        src="./image/WhatsApp Audio 2025-11-13 at 17.33.24_6a2497b1.mp3"
       />
     </div>
   );
